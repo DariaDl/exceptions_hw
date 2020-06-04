@@ -3,9 +3,12 @@ class MyError(Exception):
     pass
 
 try:
-    operator = input('Введите оператор: ')
-    first_number = input('Введите первое число: ')
-    second_number = input('Введите второе число: ')
+    print('Введите пример в следующем виде: + 2 2')
+    primer = str(input('Введите пример: '))
+    list = primer.split(' ')
+    operator = list[0]
+    first_number = int(list[1])
+    second_number = int(list[2])
     if (operator or first_number or second_number) == ' ':
         raise MyError('Недостаточно данных!')
     assert operator in operators, 'Введён неверный оператор'
