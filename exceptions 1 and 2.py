@@ -16,7 +16,7 @@ try:
         result = first_number + second_number
     elif operator == '-':
         result = first_number - second_number
-    elif operator == '/' or ':':
+    elif (operator == '/') or (operator == ':'):
         result = first_number / second_number
     elif operator == '*':
         result = first_number * second_number
